@@ -1,0 +1,26 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open with Chrome",
+            "url": "http://localhost/295/${relativeFile}",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "PHP XDebug",
+            "type": "php",
+            "request": "launch",
+            "program": "${file}",
+            "stopOnEntry": true,
+            "cwd": "${fileDirname}",
+            "port": 9003,
+            "runtimeExecutable": "C:\\xampp\\php\\php.exe"
+        }
+    ]
+}
