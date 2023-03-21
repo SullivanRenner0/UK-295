@@ -2,7 +2,7 @@
 namespace App;
 
 class Artikel{
-    public function __construct($method){
+    public function __construct($method, $param = null){
         echo "<br>Artikel :: Konstruktor<br>";
         $this->{$method}();
     }
