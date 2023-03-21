@@ -1,9 +1,9 @@
 <?php
-$ini = parse_ini_file("settings.ini", true);
+$ini = parse_ini_file("../settings.ini", true);
 $conn = new mysqli($ini["mysql"]["host"], $ini["mysql"]["user"], $ini["mysql"]["password"], $ini["mysql"]["db"]);
-echo "<pre>";
+// echo "<pre>";
 // print_r($ini);
-echo "</pre>";
+// echo "</pre>";
 // echo $ini["mysql"]["host"] . "<br>";
 //......./9.control.php
 //getData
@@ -65,7 +65,7 @@ function ResetDatabase(){
 function getData(){
     try{
         global $conn;
-        if (isset($_GET["id"]))
+        if (isset($_GET["id"]) && $_GET["id"] != 0)
         {
             $id = $_GET["id"];
             $sql = "Select * from users where id = $id";
