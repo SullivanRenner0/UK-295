@@ -55,7 +55,7 @@ class Lager{
         if ($id <= 0)
             $sql = "SELECT * FROM lager";
         else
-        $sql = "SELECT * FROM lager where id = $id";
+            $sql = "SELECT * FROM lager where id = $id";
 
         $result = $this->db->query($sql);
         $data = array();

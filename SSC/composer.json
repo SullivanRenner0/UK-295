@@ -1,0 +1,21 @@
+{
+    "name": "renner/ssc",
+    "description": "Beschreibung",
+    "autoload": {
+        "psr-4": {
+            "Renne\\SSC\\": "src/",
+            "Src\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "renner",
+            "email": "sullivan.renner@edu.gbssg.ch"
+        }
+    ],
+    "require": {
+        "steampixel/simple-php-router": "^0.7.1",
+        "vlucas/valitron": "^1.4"
+    }
+}

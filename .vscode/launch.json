@@ -9,7 +9,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open with Chrome",
-            "url": "http://localhost:82",
+            "url": "http://localhost:842",
             "webRoot": "${workspaceFolder}"
         },
         {

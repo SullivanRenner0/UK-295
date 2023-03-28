@@ -1,5 +1,4 @@
 <?php
-use App\Users;
 use Steampixel\Route;
 
 include("AutoLoader.php");
@@ -11,15 +10,6 @@ Route::add('/', function(){
 Route::add('/info', function(){
     phpinfo();
 });
-
-// Route::add('/App/Users/insertData/([0-9]*)/([a-zA-Z]*)', function($age, $name){
-//     $user = new Users();
-//     $user->insertData($age, $name);
-// }, ["get", "post"]);
-// Route::add('/App/Users/updateData/([0-9]*)/([0-9]*)/([a-zA-Z]*)', function($id, $age, $name){
-//     $user = new Users();
-//     $user->updateData($id, $age, $name);
-// }, ["get", "post"]);
 
 Route::add('/([a-zA-Z0-9]*)', function($class){
     Run("App\\".$class);
@@ -44,14 +34,20 @@ Route::add('/([a-zA-Z0-9]*)/([a-zA-Z0-9]*)/(.*)', function($class, $method, $par
 }, ["get", "post"]);
 
 function Run($class, $method = null, $param = null){
-    try{
+    try
+    {
         if (!class_exists($class))
+        {
+            echo "Klasse $class nicht gefunden";
             return;
         }
-    catch(Exception $e){
-        // echo $e->getMessage();
+    }
+    catch(Exception $e)
+    {
+        echo $e->getMessage();
         return;
     }
+
     $app = new $class();
     
     if ($method == null || !method_exists($class, $method))

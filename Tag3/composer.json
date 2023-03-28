@@ -1,0 +1,22 @@
+{
+    "name": "renne/tag3",
+    "description": "Beschreibung",
+    "autoload": {
+        "psr-4": {
+            "Renne\\Tag3\\": "src/",
+            "Lib\\": "lib/",
+            "Src\\": "src/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "renne",
+            "email": "sullivan.renner@edu.gbssg.ch"
+        }
+    ],
+    "require": {
+        "steampixel/simple-php-router": "^0.7.1",
+        "erusev/parsedown": "^1.7"
+    }
+}
